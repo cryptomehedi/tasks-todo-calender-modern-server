@@ -37,8 +37,8 @@ module.exports.completeTask = async (req, res) => {
     const updateDoc = {
         $set: status,
         }
-    const results = await tasksCollection.updateOne(filter, updateDoc, options)
-    res.send(results) 
+    const results = await TaskCollection().updateOne(filter, updateDoc, options)
+    res.send(results)
 }
 
 module.exports.deleteTask = async (req, res) => {
